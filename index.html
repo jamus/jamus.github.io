@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/main.css">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <script src="assets/decryptedText.js"></script>
 </head>
 
 <body>
   <main class="centered-grid">
     <section class="content-area">
-      <h1>Hi, I'm Jamus.</h1>
-      <p>A senior front-end developer with an affection for design, JavaScript and UX.</p>
+      <h1 id="decrypted-heading" style="visibility:hidden;">Hi, I'm Jamus.</h1>
+        <p id="decrypted-paragraph" style="visibility:hidden;">A senior front-end developer with an affection for design, JavaScript and UX.</p>
       <img src="assets/jamus-mark.svg" alt="Jamus logo mark" class="logo-mark" width="60" height="60">
       <p class="social">
         <a href="https://www.linkedin.com/in/jamie-reynolds-4b684210" class="item" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in new tab)"><img width="24" alt="LinkedIn profile" src="assets/linkedin.png"></a>
@@ -21,13 +22,25 @@
     </section>
   </main>
 <script type="text/javascript">
-	/*
-	// Hello, I'm Jamus
-	// A UI/UX Designer and Senior Frontend Developer in 😍 with Vue.js
-	// There is nothing interesting here right now I'm afraid
-	// You've got this far though so be sure to say "Hi" at https://x.com/jamusreynolds
-	*/
-
+  window.addEventListener('DOMContentLoaded', function() {
+    const heading = document.getElementById('decrypted-heading');
+    const paragraph = document.getElementById('decrypted-paragraph');
+    if (heading) {
+      applyDecryptedText(heading, {
+        speed: 30,
+        revealFrames: 4,
+        onComplete: function() {
+          if (paragraph) {
+            applyDecryptedText(paragraph, {
+              speed: 18,
+              revealFrames: 4
+            });
+          }
+        }
+      });
+    }
+  });
+</script>
 </script>
 </body>
 </html>
