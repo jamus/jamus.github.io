@@ -1,127 +1,92 @@
 body {
   background-color: #d18119;
   color: #2f3236;
-}
-
-.container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 1510px;
-}
-
-.container-child {
-  width: 0%;
-}
-
-@media only screen and (min-device-width: 321px) {
-  .container-child {
-    width: 5%;
-  }
-}
-
-@media only screen and (min-device-width: 650px) {
-  .container-child {
-    width: 20%;
-  }
-}
-
-.container-child + .container-child {
-  margin-left: 2%;
-}
-
-.content {
-  color: rgba(255, 255, 255, 0.796);
-  font-family: 'Quicksand', sans-serif;
-  font-size: 1em;
-  max-width: 400px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  background: url("../assets/jamus-mark.svg") no-repeat;
-  z-index: 1;
-  background-size: 100px;
-  background-position-y: 32%;
-  background-position-x: 2.5%;
-  padding: 10%;
-}
-
-@media only screen and (min-device-width: 321px) {
-  .content {
-    background-position-y: 38%;
-  }
-}
-
-@media only screen and (min-device-width: 650px) {
-  .content {
-    background-size: 150px;
-    font-size: 1.24em;
-  }
-}
-
-@media only screen and (min-device-width: 900px) {
-  .content {
-    background-position-y: 40%;
-    background-position-x: 0%;
-    background-size: 200px;
-    padding: 90px 0px 0 10%;
-  }
-}
-
-@media only screen and (min-device-width: 1520px) {
-  .content {
-    background-position-y: 38%;
-    background-position-x: 55%;
-    background-size: 200px;
-    padding: 90px 0px 0 25%;
-  }
-}
-
-.cols {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding-top: 0;
-  padding-left: 5%;
-}
-
-@media only screen and (min-device-width: 650px) {
-  .cols {
-    padding-top: 85px;
-  }
-}
-
-.main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 100px;
-  padding-left: 10px;
-}
-
-@media only screen and (min-device-width: 650px) {
-  .main {
-    padding-top: 0;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 100vh;
-    margin-top: -40%;
-  }
-}
-
-.main .social {
-  cursor: default;
-  opacity: 0.25;
+  min-height: 100vh;
   margin: 0;
-  padding-top: 10px;
+  font-family: 'Quicksand', sans-serif;
+  display: grid;
+  place-items: center;
 }
 
-.main .social .item:not(:first-child) {
-  padding: 0 0 0 5px;
+.centered-grid {
+  display: grid;
+  min-height: 100vh;
+  width: 100vw;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+
+.content-area {
+  color: #fff !important;
+  max-width: 440px;
+  width: 90vw;
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  border-radius: 1.2rem;
+  margin: 2rem 0;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif !important;
+}
+/* Logo mark at top of content */
+.logo-mark {
+  display: block;
+  margin: 0 0 1.5rem 0;
+  width: 60px;
+  height: 60px;
+}
+
+.content-area h1,
+.content-area p {
+  color: #fff !important;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif !important;
+}
+
+.content-area h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  letter-spacing: -0.01em;
+  color: #fff;
+  line-height: 1.15;
+}
+
+.content-area p {
+  font-size: 1.18rem;
+  line-height: 1.7;
+  font-weight: 500;
+  color: #f7f7f7;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.social {
+  margin-top: 1.5rem;
+  opacity: 0.25;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.item img {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .centered-grid {
+    min-height: unset;
+    padding: 0;
+  }
+  .content-area {
+    background-size: 36px;
+    padding: 1.2rem 0.5rem 1rem 2.8rem;
+    max-width: 98vw;
+    width: 98vw;
+    margin: 1rem 0;
+  }
+  .content-area h1 {
+    font-size: 1.45rem;
+  }
+  .content-area p {
+    font-size: 1.04rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
