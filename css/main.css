@@ -1,3 +1,6 @@
+html, body {
+  overflow-x: hidden;
+}
 body {
   background-color: #d18119;
   color: #2f3236;
@@ -11,7 +14,8 @@ body {
 .centered-grid {
   display: grid;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
+  max-width: 100vw;
   grid-template-columns: 1fr;
   align-items: center;
   justify-items: center;
@@ -22,6 +26,8 @@ body {
   color: #fff !important;
   max-width: 440px;
   width: 90vw;
+  max-width: 100vw;
+  box-sizing: border-box;
   padding: 2.5rem 1.5rem 2rem 1.5rem;
   border-radius: 1.2rem;
   margin: 2rem 0;
@@ -33,6 +39,8 @@ body {
   margin: 0 0 1.5rem 0;
   width: 60px;
   height: 60px;
+  max-width: 100%;
+  height: auto;
 }
 
 .content-area h1,
@@ -77,8 +85,8 @@ body {
   }
   .content-area {
     background-size: 36px;
-    padding: 1.2rem 0.5rem 1rem 2.8rem;
-    max-width: 98vw;
+    padding: 1.2rem 1.5rem 1rem 1.5rem;
+    max-width: 100vw;
     width: 98vw;
     margin: 1rem 0;
   }
