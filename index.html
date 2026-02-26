@@ -85,8 +85,8 @@
       <!-- Right column: scrollable content -->
       <main class="pt-24 lg:w-1/2 lg:py-24">
         <!-- About -->
-        <section id="about" class="mb-16 scroll-mt-16 lg:mb-36 lg:scroll-mt-24">
-          <h2 class="mb-4 text-sm font-bold uppercase tracking-widest lg:sr-only">About</h2>
+        <section id="about" class="cv-section">
+          <h2 class="cv-section-heading">About</h2>
           <div class="space-y-4">
             <p>
               I am a Senior Front-End Developer with a background in visual design and extensive
@@ -109,15 +109,15 @@
         </section>
 
         <!-- Experience -->
-        <section id="experience" class="mb-16 scroll-mt-16 lg:mb-36 lg:scroll-mt-24">
-          <h2 class="mb-4 text-sm font-bold uppercase tracking-widest lg:sr-only">Experience</h2>
+        <section id="experience" class="cv-section">
+          <h2 class="cv-section-heading">Experience</h2>
           <ol class="space-y-12">
             <!-- Sano Genetics -->
-            <li class="group flex flex-col gap-1 sm:flex-row sm:gap-8">
-              <span class="mt-1 shrink-0 text-xs uppercase sm:w-32">2022 — 2025</span>
+            <li class="cv-row">
+              <span class="cv-date">2022 — 2025</span>
               <div>
                 <h3 class="font-medium">Senior Front-end Developer · Sano Genetics</h3>
-                <p class="mt-2 text-sm">
+                <p class="cv-desc">
                   Worked in a highly collaborative feature team delivering key features across both
                   the participant-facing Portal and admin system. Key contributions included
                   building the study mapper tooling (enabling PMs to construct complex survey logic
@@ -126,85 +126,85 @@
                   supporting six languages. Also led migration of the admin app to Vue 3, TypeScript
                   and Composition API.
                 </p>
-                <ul class="mt-3 flex flex-wrap gap-2">
-                  <li class="rounded-full px-3 py-1 text-xs">Vue.js</li>
-                  <li class="rounded-full px-3 py-1 text-xs">TypeScript</li>
-                  <li class="rounded-full px-3 py-1 text-xs">Pinia</li>
-                  <li class="rounded-full px-3 py-1 text-xs">VueFlow</li>
-                  <li class="rounded-full px-3 py-1 text-xs">Storybook</li>
-                  <li class="rounded-full px-3 py-1 text-xs">Vitest</li>
+                <ul class="tag-list">
+                  <li class="tag">Vue.js</li>
+                  <li class="tag">TypeScript</li>
+                  <li class="tag">Pinia</li>
+                  <li class="tag">VueFlow</li>
+                  <li class="tag">Storybook</li>
+                  <li class="tag">Vitest</li>
                 </ul>
               </div>
             </li>
             <!-- Klarian -->
-            <li class="group flex flex-col gap-1 sm:flex-row sm:gap-8">
-              <span class="mt-1 shrink-0 text-xs uppercase sm:w-32">2020 — 2022</span>
+            <li class="cv-row">
+              <span class="cv-date">2020 — 2022</span>
               <div>
                 <h3 class="font-medium">Senior Front-end Developer · Klarian</h3>
-                <p class="mt-2 text-sm">
+                <p class="cv-desc">
                   Worked closely with the technical lead and product team to bring the product idea
                   into a tangible MVP. Designed and built the first iteration of a pipeline
                   monitoring and early alerting system using websockets and mapping visualisations.
                   Implemented the frontend codebase testing, CI and deployment pipeline, and
                   mentored a junior front-end engineer.
                 </p>
-                <ul class="mt-3 flex flex-wrap gap-2">
-                  <li class="rounded-full px-3 py-1 text-xs">Vue.js</li>
-                  <li class="rounded-full px-3 py-1 text-xs">XState</li>
-                  <li class="rounded-full px-3 py-1 text-xs">Cypress</li>
-                  <li class="rounded-full px-3 py-1 text-xs">Tailwind CSS</li>
-                  <li class="rounded-full px-3 py-1 text-xs">Leaflet.js</li>
+                <ul class="tag-list">
+                  <li class="tag">Vue.js</li>
+                  <li class="tag">XState</li>
+                  <li class="tag">Cypress</li>
+                  <li class="tag">Tailwind CSS</li>
+                  <li class="tag">Leaflet.js</li>
                 </ul>
               </div>
             </li>
             <!-- Flybe -->
-            <li class="group flex flex-col gap-1 sm:flex-row sm:gap-8">
-              <span class="mt-1 shrink-0 text-xs uppercase sm:w-32">2019 — 2020</span>
+            <li class="cv-row">
+              <span class="cv-date">2019 — 2020</span>
               <div>
                 <h3 class="font-medium">Principal Front-end Developer · Flybe</h3>
-                <p class="mt-2 text-sm">
+                <p class="cv-desc">
                   Responsible for user experience and development of a new flight search application
                   planned to launch alongside the Virgin Airlines rebrand.
                 </p>
-                <ul class="mt-3 flex flex-wrap gap-2">
-                  <li class="rounded-full px-3 py-1 text-xs">Vue.js</li>
-                  <li class="rounded-full px-3 py-1 text-xs">Vuex</li>
-                  <li class="rounded-full px-3 py-1 text-xs">Rollup</li>
+                <ul class="tag-list">
+                  <li class="tag">Vue.js</li>
+                  <li class="tag">Vuex</li>
+                  <li class="tag">Rollup</li>
                 </ul>
               </div>
             </li>
             <!-- Upad -->
-            <li class="group flex flex-col gap-1 sm:flex-row sm:gap-8">
-              <span class="mt-1 shrink-0 text-xs uppercase sm:w-32">2017 — 2019</span>
+            <li class="cv-row">
+              <span class="cv-date">2017 — 2019</span>
               <div>
                 <h3 class="font-medium">Senior Front-end Developer · Upad</h3>
-                <p class="mt-2 text-sm">
+                <p class="cv-desc">
                   Designed, planned and led the transition from a PHP website to an API-driven
                   Vue.js application, including UX design and wireframe creation that shaped user
                   journeys and enabled cross-functional discussion.
                 </p>
-                <ul class="mt-3 flex flex-wrap gap-2">
-                  <li class="rounded-full px-3 py-1 text-xs">Vue.js</li>
-                  <li class="rounded-full px-3 py-1 text-xs">Vuelidate</li>
-                  <li class="rounded-full px-3 py-1 text-xs">Webpack</li>
+                <ul class="tag-list">
+                  <li class="tag">Vue.js</li>
+                  <li class="tag">Vuelidate</li>
+                  <li class="tag">Webpack</li>
                 </ul>
               </div>
             </li>
             <!-- Crowdcube -->
-            <li class="group flex flex-col gap-1 sm:flex-row sm:gap-8">
-              <span class="mt-1 shrink-0 text-xs uppercase sm:w-32">2015 — 2017</span>
+            <li class="cv-row">
+              <span class="cv-date">2015 — 2017</span>
               <div>
                 <h3 class="font-medium">Front-end Developer · Crowdcube</h3>
-                <p class="mt-2 text-sm">
+                <p class="cv-desc">
                   Part of a small feature team working on numerous feature re-implementation
                   projects — replacing legacy code and updating the design across core user
                   journeys. These high-visibility projects visually transformed the website while
                   improving functionality, efficiency and user experience.
                 </p>
-                <ul class="mt-3 flex flex-wrap gap-2">
-                  <li class="rounded-full px-3 py-1 text-xs">AngularJS</li>
-                  <li class="rounded-full px-3 py-1 text-xs">JavaScript</li>
-                  <li class="rounded-full px-3 py-1 text-xs">Gulp</li>
+                <ul class="tag-list">
+                  <li class="tag">AngularJS</li>
+                  <li class="tag">JavaScript</li>
+                  <li class="tag">Gulp</li>
                 </ul>
               </div>
             </li>
@@ -212,18 +212,18 @@
         </section>
 
         <!-- Projects -->
-        <section id="projects" class="mb-16 scroll-mt-16 lg:mb-36 lg:scroll-mt-24">
-          <h2 class="mb-4 text-sm font-bold uppercase tracking-widest lg:sr-only">Projects</h2>
+        <section id="projects" class="cv-section">
+          <h2 class="cv-section-heading">Projects</h2>
           <ol class="space-y-12">
             <!-- OrbitQ -->
-            <li class="group flex flex-col gap-1 sm:flex-row sm:gap-8">
+            <li class="cv-row">
               <div>
                 <h3 class="font-medium">
                   <a
                     href="https://www.orbitq.app/"
                     target="_blank"
                     rel="noreferrer"
-                    class="inline-flex items-center gap-1"
+                    class="ext-link"
                   >
                     OrbitQ iOS App
                     <ion-icon
@@ -233,46 +233,46 @@
                     ></ion-icon>
                   </a>
                 </h3>
-                <p class="mt-2 text-sm">
+                <p class="cv-desc">
                   Orbital launch tracking app. Designed in Figma - built in React Native. Now in
                   Beta testing with fellow space nerds ahead of an upcoming iOS appstore release.
                 </p>
-                <ul class="mt-3 flex flex-wrap gap-2">
-                  <li class="rounded-full px-3 py-1 text-xs">Typescript</li>
-                  <li class="rounded-full px-3 py-1 text-xs">React Native</li>
-                  <li class="rounded-full px-3 py-1 text-xs">React Redux</li>
-                  <li class="rounded-full px-3 py-1 text-xs">Expo</li>
-                  <li class="rounded-full px-3 py-1 text-xs">Jest</li>
+                <ul class="tag-list">
+                  <li class="tag">Typescript</li>
+                  <li class="tag">React Native</li>
+                  <li class="tag">React Redux</li>
+                  <li class="tag">Expo</li>
+                  <li class="tag">Jest</li>
                 </ul>
               </div>
             </li>
             <!-- OrbitQ -->
-            <li class="group flex flex-col gap-1 sm:flex-row sm:gap-8">
+            <li class="cv-row">
               <div>
                 <h3 class="font-medium">OrbitQ Service</h3>
-                <p class="mt-2 text-sm">
+                <p class="cv-desc">
                   Backend API proxy, launch tracking and push notificaions service. Express server
                   with Postgres database, Redis caching. Hosted and configured on
                   <a href="https://railway.com/" target="_blank">Railway</a>
                 </p>
-                <ul class="mt-3 flex flex-wrap gap-2">
-                  <li class="rounded-full px-3 py-1 text-xs">Typescript</li>
-                  <li class="rounded-full px-3 py-1 text-xs">Express</li>
-                  <li class="rounded-full px-3 py-1 text-xs">Postgres</li>
-                  <li class="rounded-full px-3 py-1 text-xs">Expo</li>
-                  <li class="rounded-full px-3 py-1 text-xs">Jest</li>
+                <ul class="tag-list">
+                  <li class="tag">Typescript</li>
+                  <li class="tag">Express</li>
+                  <li class="tag">Postgres</li>
+                  <li class="tag">Expo</li>
+                  <li class="tag">Jest</li>
                 </ul>
               </div>
             </li>
             <!-- Underrated Fetch -->
-            <li class="group flex flex-col gap-1 sm:flex-row sm:gap-8">
+            <li class="cv-row">
               <div>
                 <h3 class="font-medium">
                   <a
                     href="https://github.com/jamus/underrated-fetch"
                     target="_blank"
                     rel="noreferrer"
-                    class="inline-flex items-center gap-1"
+                    class="ext-link"
                   >
                     Underrated Fetch
                     <ion-icon
@@ -282,27 +282,27 @@
                     ></ion-icon>
                   </a>
                 </h3>
-                <p class="mt-2 text-sm">
+                <p class="cv-desc">
                   Node.js HTTP caching layer. Build intially as part of OrbitQ's api proxy now
                   published as an NPM package.
                 </p>
-                <ul class="mt-3 flex flex-wrap gap-2">
-                  <li class="rounded-full px-3 py-1 text-xs">Node.js</li>
-                  <li class="rounded-full px-3 py-1 text-xs">NPM</li>
-                  <li class="rounded-full px-3 py-1 text-xs">Cursor</li>
-                  <li class="rounded-full px-3 py-1 text-xs">Jest</li>
+                <ul class="tag-list">
+                  <li class="tag">Node.js</li>
+                  <li class="tag">NPM</li>
+                  <li class="tag">Cursor</li>
+                  <li class="tag">Jest</li>
                 </ul>
               </div>
             </li>
             <!-- Delta V -->
-            <li class="group flex flex-col gap-1 sm:flex-row sm:gap-8">
+            <li class="cv-row">
               <div>
                 <h3 class="font-medium">
                   <a
                     href="https://www.roblox.com/games/3600789681/Delta-V-Rockets"
                     target="_blank"
                     rel="noreferrer"
-                    class="inline-flex items-center gap-1"
+                    class="ext-link"
                   >
                     Delta V Rockets
                     <ion-icon
@@ -312,14 +312,14 @@
                     ></ion-icon>
                   </a>
                 </h3>
-                <p class="mt-2 text-sm">
+                <p class="cv-desc">
                   Physics based Rocket flight game built for Roblox in Lua. Take off. Fly. Land.
                   Collect samples! Don't explode.
                 </p>
-                <ul class="mt-3 flex flex-wrap gap-2">
-                  <li class="rounded-full px-3 py-1 text-xs">Lua</li>
-                  <li class="rounded-full px-3 py-1 text-xs">Roblox</li>
-                  <li class="rounded-full px-3 py-1 text-xs">Arch State Machine</li>
+                <ul class="tag-list">
+                  <li class="tag">Lua</li>
+                  <li class="tag">Roblox</li>
+                  <li class="tag">Arch State Machine</li>
                 </ul>
               </div>
             </li>

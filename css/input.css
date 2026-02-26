@@ -1,1 +1,35 @@
 @import "tailwindcss";
+
+@layer components {
+  .tag {
+    @apply rounded-full px-3 py-1 text-xs;
+  }
+
+  .tag-list {
+    @apply mt-3 flex flex-wrap gap-2;
+  }
+
+  .cv-row {
+    @apply flex flex-col gap-1 sm:flex-row sm:gap-8;
+  }
+
+  .cv-date {
+    @apply mt-1 shrink-0 text-xs uppercase sm:w-32;
+  }
+
+  .cv-desc {
+    @apply mt-2 text-sm;
+  }
+
+  .cv-section {
+    @apply mb-16 scroll-mt-16 lg:mb-36 lg:scroll-mt-24;
+  }
+
+  .cv-section-heading {
+    @apply mb-4 text-sm font-bold uppercase tracking-widest lg:sr-only;
+  }
+
+  .ext-link {
+    @apply inline-flex items-center gap-1;
+  }
+}
