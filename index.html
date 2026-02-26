@@ -1,46 +1,349 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<title>J a m u s</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="css/main.css">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
-  <script src="assets/decryptedText.js"></script>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jamus.co.uk</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource-variable/mona-sans/index.css"
+    />
+    <link rel="stylesheet" href="css/output.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </head>
 
-<body>
-  <main class="centered-grid">
-    <section class="content-area">
-      <h1 id="decrypted-heading" style="visibility:hidden;">Hi, I'm Jamus.</h1>
-        <p id="decrypted-paragraph" style="visibility:hidden;">A senior front-end developer with an affection for design, JavaScript and UX.</p>
-      <img src="assets/jamus-mark.svg" alt="Jamus logo mark" class="logo-mark" width="60" height="60">
-      <p class="social">
-        <a href="https://www.linkedin.com/in/jamie-reynolds-4b684210" class="item" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in new tab)"><img width="24" alt="LinkedIn profile" src="assets/linkedin.png"></a>
-        <a href="https://github.com/jamus" class="item" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in new tab)"><img width="24" alt="GitHub profile" src="assets/github.png"></a>
-      </p>
-    </section>
-  </main>
-<script type="text/javascript">
-  window.addEventListener('DOMContentLoaded', function() {
-    const heading = document.getElementById('decrypted-heading');
-    const paragraph = document.getElementById('decrypted-paragraph');
-    if (heading) {
-      applyDecryptedText(heading, {
-        speed: 30,
-        revealFrames: 4,
-        onComplete: function() {
-          if (paragraph) {
-            applyDecryptedText(paragraph, {
-              speed: 18,
-              revealFrames: 4
-            });
-          }
-        }
-      });
-    }
-  });
-</script>
-</script>
-</body>
+  <body>
+    <div class="mx-auto min-h-screen max-w-screen-lg px-6 md:px-12 lg:flex lg:gap-4 lg:px-24">
+      <!-- Left column: sticky -->
+      <header
+        class="lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-1/3 lg:flex-col lg:justify-between pt-20 lg:py-24"
+      >
+        <div>
+          <h1 class="text-4xl font-bold text-orange-600">Jamie Reynolds</h1>
+          <h2 class="mt-3 text-lg font-medium">Senior Developer</h2>
+          <p class="mt-4 max-w-xs text-sm lg:pr-10">Passionate about design, JavaScript, and UX.</p>
+
+          <!-- Nav -->
+          <nav class="mt-6 lg:my-16 hidden lg:block">
+            <ul class="space-y-4">
+              <li>
+                <a href="#about" class="nav-item">
+                  <span class="nav-text text-xs font-bold uppercase tracking-widest">About</span>
+                </a>
+              </li>
+              <li>
+                <a href="#experience" class="nav-item">
+                  <span class="nav-text text-xs font-bold uppercase tracking-widest"
+                    >Experience</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a href="#projects" class="nav-item">
+                  <span class="nav-text text-xs font-bold uppercase tracking-widest"
+                    >Side Projects</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Social links -->
+        <ul class="mt-8 flex items-center gap-5 lg:mt-0">
+          <li>
+            <a href="https://github.com/jamus" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <ion-icon
+                name="logo-github"
+                class="h-6 w-6"
+                aria-hidden="true"
+                style="font-size: 1.5rem"
+              ></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/jamie-reynolds-4b684210/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+            >
+              <ion-icon
+                name="logo-linkedin"
+                class="h-6 w-6"
+                aria-hidden="true"
+                style="font-size: 1.5rem"
+              ></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </header>
+
+      <!-- Right column: scrollable content -->
+      <main class="pt-12 lg:w-2/3 lg:py-24">
+        <!-- About -->
+        <section id="about" class="cv-section">
+          <h2 class="cv-section-heading">About</h2>
+          <div class="space-y-4">
+            <p>
+              I am a senior front-end focused developer with a background in visual design and
+              extensive experience building web applications. I’ve worked with a wide range of
+              technologies, but more recently I've enjoyed focusing on
+              <a href="https://vuejs.org/">Vue.js</a>.
+            </p>
+            <p>
+              I'm happiest working where design meets engineering. Helping shape product ideas into
+              enjoyable experiences with well-structured, reliable code.
+            </p>
+            <p>
+              Currently enjoying game development using
+              <a href="https://create.roblox.com/landing" target="_blank">Roblox studio</a>,
+              <a href="https://www.youtube.com/watch?v=QerbfRokjRM" target="_blank"
+                >Linkin Park's</a
+              >
+              re-emergence and playing with a
+              <a href="https://teenage.engineering/products/po" target="_blank"
+                >miniature sampler</a
+              >
+              in an attempt to create something resembling music.
+            </p>
+          </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="cv-section">
+          <h2 class="cv-section-heading">Experience</h2>
+          <ol class="space-y-12">
+            <!-- Sano Genetics -->
+            <li class="cv-row">
+              <div>
+                <span class="cv-date">2022 — 2025</span>
+                <h3 class="font-medium">
+                  Senior Front-end Developer <span class="cv-employer">/ Sano Genetics</span>
+                </h3>
+                <p class="cv-desc">
+                  Worked in a highly collaborative feature team delivering key features across both
+                  the participant-facing Portal and admin system.
+                </p>
+                <ul class="tag-list">
+                  <li class="tag">Vue.js</li>
+                  <li class="tag">TypeScript</li>
+                  <li class="tag">Pinia</li>
+                  <li class="tag">VueFlow</li>
+                  <li class="tag">Storybook</li>
+                  <li class="tag">Vitest</li>
+                </ul>
+              </div>
+            </li>
+            <!-- Klarian -->
+            <li class="cv-row">
+              <div>
+                <span class="cv-date">2020 — 2022</span>
+                <h3 class="font-medium">
+                  Senior Front-end Developer <span class="cv-employer">/ Klarian</span>
+                </h3>
+                <p class="cv-desc">
+                  Worked closely with the technical lead and product team to bring the product idea
+                  into a tangible MVP. Designed and built the first iteration of a pipeline
+                  monitoring and early alerting system using websockets and mapping visualisations.
+                </p>
+                <ul class="tag-list">
+                  <li class="tag">Vue.js</li>
+                  <li class="tag">XState</li>
+                  <li class="tag">Cypress</li>
+                  <li class="tag">Tailwind CSS</li>
+                  <li class="tag">Leaflet.js</li>
+                </ul>
+              </div>
+            </li>
+            <!-- Flybe -->
+            <li class="cv-row">
+              <div>
+                <span class="cv-date">2019 — 2020</span>
+                <h3 class="font-medium">
+                  Principal Front-end Developer <span class="cv-employer">/ Flybe</span>
+                </h3>
+                <p class="cv-desc">
+                  Responsible for user experience and development of a new flight search application
+                  planned to launch alongside the Virgin Airlines rebrand. RIP Flybe
+                </p>
+                <ul class="tag-list">
+                  <li class="tag">Vue.js</li>
+                  <li class="tag">Vuex</li>
+                  <li class="tag">Rollup</li>
+                </ul>
+              </div>
+            </li>
+            <!-- Upad -->
+            <li class="cv-row">
+              <div>
+                <span class="cv-date">2017 — 2019</span>
+                <h3 class="font-medium">
+                  Senior Front-end Developer <span class="cv-employer">/ Upad</span>
+                </h3>
+                <p class="cv-desc">
+                  Designed, planned and led the transition from a PHP website to an API-driven
+                  Vue.js application, including UX design and wireframe creations that shaped user
+                  journeys and enabled cross-functional discussion.
+                </p>
+                <ul class="tag-list">
+                  <li class="tag">Vue.js</li>
+                  <li class="tag">Vuelidate</li>
+                  <li class="tag">Webpack</li>
+                </ul>
+              </div>
+            </li>
+            <!-- Crowdcube -->
+            <li class="cv-row">
+              <div>
+                <span class="cv-date">2015 — 2017</span>
+                <h3 class="font-medium">
+                  Front-end Developer <span class="cv-employer">/ Crowdcube</span>
+                </h3>
+                <p class="cv-desc">
+                  Part of a small feature team working on numerous feature re-implementation
+                  projects. These high-visibility projects visually transformed the website while
+                  improving functionality, efficiency and user experience.
+                </p>
+                <ul class="tag-list">
+                  <li class="tag">AngularJS</li>
+                  <li class="tag">JavaScript</li>
+                  <li class="tag">Gulp</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="cv-section">
+          <h2 class="cv-section-heading">Projects</h2>
+          <ol class="space-y-12">
+            <!-- OrbitQ -->
+            <li class="cv-row">
+              <div>
+                <h3 class="font-medium">
+                  <a
+                    href="https://www.orbitq.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="ext-link"
+                  >
+                    OrbitQ iOS App
+                    <ion-icon
+                      name="open-outline"
+                      aria-hidden="true"
+                      class="project-link"
+                    ></ion-icon>
+                  </a>
+                </h3>
+                <p class="cv-desc">
+                  Orbital launch tracking app. Designed in Figma - built in React Native. Now in
+                  Beta testing with fellow space nerds ahead of an upcoming iOS appstore release.
+                </p>
+                <ul class="tag-list">
+                  <li class="tag">Typescript</li>
+                  <li class="tag">React Native</li>
+                  <li class="tag">React Redux</li>
+                  <li class="tag">Expo</li>
+                  <li class="tag">Jest</li>
+                </ul>
+              </div>
+            </li>
+            <!-- OrbitQ -->
+            <li class="cv-row">
+              <div>
+                <h3 class="font-medium">OrbitQ Service</h3>
+                <p class="cv-desc">
+                  Backend API proxy, launch tracking and push notificaions service. Express server
+                  with Postgres database and Redis caching. Hosted and configured on
+                  <a href="https://railway.com/" target="_blank">Railway</a>
+                </p>
+                <ul class="tag-list">
+                  <li class="tag">Typescript</li>
+                  <li class="tag">Node.js</li>
+                  <li class="tag">Postgres</li>
+                  <li class="tag">Expo</li>
+                  <li class="tag">Jest</li>
+                </ul>
+              </div>
+            </li>
+            <!-- Underrated Fetch -->
+            <li class="cv-row">
+              <div>
+                <h3 class="font-medium">
+                  <a
+                    href="https://github.com/jamus/underrated-fetch"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="ext-link"
+                  >
+                    Underrated Fetch
+                    <ion-icon
+                      name="open-outline"
+                      aria-hidden="true"
+                      class="project-link"
+                    ></ion-icon>
+                  </a>
+                </h3>
+                <p class="cv-desc">
+                  Node.js HTTP caching layer. Build intially as part of OrbitQ's API proxy now
+                  published as an NPM package.
+                </p>
+                <ul class="tag-list">
+                  <li class="tag">Node.js</li>
+                  <li class="tag">NPM</li>
+                  <li class="tag">Cursor</li>
+                  <li class="tag">Jest</li>
+                </ul>
+              </div>
+            </li>
+            <!-- Delta V -->
+            <li class="cv-row">
+              <div>
+                <h3 class="font-medium">
+                  <a
+                    href="https://www.roblox.com/games/3600789681/Delta-V-Rockets"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="ext-link"
+                  >
+                    Delta V Rockets
+                    <ion-icon
+                      name="open-outline"
+                      aria-hidden="true"
+                      class="project-link"
+                    ></ion-icon>
+                  </a>
+                </h3>
+                <p class="cv-desc">
+                  Physics based Rocket flight game built for Roblox in Lua. Take off. Fly. Land.
+                  Collect samples! Don't explode.
+                </p>
+                <ul class="tag-list">
+                  <li class="tag">Lua</li>
+                  <li class="tag">Roblox</li>
+                  <li class="tag">Arch State Machine</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <!-- Footer -->
+        <footer class="pb-16 text-xs">
+          <p>
+            Built with
+            <a href="https://tailwindcss.com" target="_blank" rel="noreferrer">Tailwind CSS</a>.
+            Deployed on
+            <a href="https://pages.github.com" target="_blank" rel="noreferrer">GitHub Pages</a>.
+          </p>
+        </footer>
+      </main>
+    </div>
+  </body>
 </html>
