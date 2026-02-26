@@ -7,6 +7,7 @@
 @layer base {
   html {
     font-size: 20px;
+    scroll-behavior: smooth;
   }
   body {
     font-weight: 500;
@@ -20,6 +21,12 @@
 @layer components {
   .nav-item {
     @apply flex items-center gap-4 no-underline;
+  }
+
+  html:has(#about:target) a[href="#about"] .nav-text,
+  html:has(#experience:target) a[href="#experience"] .nav-text,
+  html:has(#projects:target) a[href="#projects"] .nav-text {
+    @apply text-orange-600;
   }
   .tag-list {
     @apply mt-3 flex flex-wrap gap-x-4 gap-y-1;
