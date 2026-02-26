@@ -5,12 +5,22 @@
 }
 
 @layer base {
+  html {
+    font-size: 20px;
+  }
   body {
     font-weight: 500;
+    @apply text-gray-800 bg-gray-50;
+  }
+  a {
+    @apply underline;
   }
 }
 
 @layer components {
+  .nav-item {
+    @apply flex items-center gap-4 no-underline;
+  }
   .tag-list {
     @apply mt-3 flex flex-wrap gap-x-4 gap-y-1;
   }
@@ -21,7 +31,7 @@
   }
 
   .cv-row {
-    @apply flex flex-col gap-1 sm:flex-row sm:gap-8;
+    @apply flex gap-1 sm:flex-row sm:gap-8;
   }
 
   .cv-date {
@@ -33,11 +43,11 @@
   }
 
   .cv-section {
-    @apply mb-16 scroll-mt-16 lg:mb-36 lg:scroll-mt-24;
+    @apply mb-16 scroll-mt-16 lg:mb-12 lg:scroll-mt-24;
   }
 
   .cv-section-heading {
-    @apply mb-4 text-sm font-bold uppercase tracking-widest lg:sr-only;
+    @apply mb-4 text-sm font-bold uppercase tracking-widest;
   }
 
   .cv-employer {
