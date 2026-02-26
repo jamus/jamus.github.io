@@ -3,10 +3,11 @@
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
-    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-sans: "Mona Sans Variable", sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-orange-600: oklch(64.6% 0.222 41.116);
+    --color-gray-500: oklch(55.1% 0.027 264.364);
     --spacing: 0.25rem;
     --breakpoint-xl: 80rem;
     --container-xs: 20rem;
@@ -210,17 +211,11 @@
   .h-6 {
     height: calc(var(--spacing) * 6);
   }
-  .h-px {
-    height: 1px;
-  }
   .min-h-screen {
     min-height: 100vh;
   }
   .w-6 {
     width: calc(var(--spacing) * 6);
-  }
-  .w-8 {
-    width: calc(var(--spacing) * 8);
   }
   .max-w-screen-xl {
     max-width: var(--breakpoint-xl);
@@ -373,19 +368,48 @@
     }
   }
 }
-@layer components {
-  .tag {
-    border-radius: calc(infinity * 1px);
-    padding-inline: calc(var(--spacing) * 3);
-    padding-block: calc(var(--spacing) * 1);
-    font-size: var(--text-xs);
-    line-height: var(--tw-leading, var(--text-xs--line-height));
+@layer base {
+  body {
+    font-weight: 500;
   }
+}
+@layer components {
   .tag-list {
     margin-top: calc(var(--spacing) * 3);
     display: flex;
     flex-wrap: wrap;
-    gap: calc(var(--spacing) * 2);
+    column-gap: calc(var(--spacing) * 4);
+    row-gap: calc(var(--spacing) * 1);
+  }
+  .tag {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--spacing) * 1.5);
+    padding-block: calc(var(--spacing) * 1);
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+    color: var(--color-orange-600);
+    &::before {
+      content: var(--tw-content);
+      display: block;
+    }
+    &::before {
+      content: var(--tw-content);
+      width: calc(var(--spacing) * 1.5);
+      height: calc(var(--spacing) * 1.5);
+    }
+    &::before {
+      content: var(--tw-content);
+      flex-shrink: 0;
+    }
+    &::before {
+      content: var(--tw-content);
+      border-radius: calc(infinity * 1px);
+    }
+    &::before {
+      content: var(--tw-content);
+      background-color: var(--color-orange-600);
+    }
   }
   .cv-row {
     display: flex;
@@ -444,6 +468,13 @@
       border-width: 0;
     }
   }
+  .cv-employer {
+    color: var(--color-gray-500);
+  }
+  .project-link {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
   .ext-link {
     display: inline-flex;
     align-items: center;
@@ -492,6 +523,11 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-content {
+  syntax: "*";
+  initial-value: "";
+  inherits: false;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -505,6 +541,7 @@
       --tw-font-weight: initial;
       --tw-tracking: initial;
       --tw-ease: initial;
+      --tw-content: "";
     }
   }
 }

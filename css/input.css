@@ -1,12 +1,23 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: "Mona Sans Variable", sans-serif;
+}
+
+@layer base {
+  body {
+    font-weight: 500;
+  }
+}
+
 @layer components {
-  .tag {
-    @apply rounded-full px-3 py-1 text-xs;
+  .tag-list {
+    @apply mt-3 flex flex-wrap gap-x-4 gap-y-1;
   }
 
-  .tag-list {
-    @apply mt-3 flex flex-wrap gap-2;
+  .tag {
+    @apply flex items-center gap-1.5 py-1 text-xs text-orange-600
+      before:block before:size-1.5 before:shrink-0 before:rounded-full before:bg-orange-600;
   }
 
   .cv-row {
@@ -27,6 +38,14 @@
 
   .cv-section-heading {
     @apply mb-4 text-sm font-bold uppercase tracking-widest lg:sr-only;
+  }
+
+  .cv-employer {
+    @apply text-gray-500;
+  }
+
+  .project-link {
+    @apply text-sm;
   }
 
   .ext-link {
