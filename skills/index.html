@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills — Jamus.co.uk</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource-variable/mona-sans/index.css"
+    />
+    <link rel="stylesheet" href="../css/output.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </head>
+
+  <body>
+    <div class="mx-auto min-h-screen max-w-screen-lg px-6 md:px-12 lg:flex lg:gap-4 lg:px-24">
+      <!-- Left column: sticky -->
+      <header
+        class="lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-1/3 lg:flex-col lg:justify-between pt-20 lg:py-24"
+      >
+        <div>
+          <h1 class="text-4xl font-bold text-orange-600">
+            <a href="../" class="no-underline">Jamie Reynolds</a>
+          </h1>
+          <h2 class="mt-3 text-lg font-medium">Claude Code Skills</h2>
+          <p class="mt-4 max-w-xs text-sm lg:pr-10">
+            Small agent skills I use day to day. Free to install and adapt.
+          </p>
+        </div>
+
+        <!-- Social links -->
+        <ul class="mt-8 flex items-center gap-5 lg:mt-0">
+          <li>
+            <a
+              href="https://github.com/jamus/jamus.github.io/tree/master/skills"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Skills on GitHub"
+            >
+              <ion-icon
+                name="logo-github"
+                class="h-6 w-6"
+                aria-hidden="true"
+                style="font-size: 1.5rem"
+              ></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </header>
+
+      <!-- Right column: scrollable content -->
+      <main class="pt-12 lg:w-2/3 lg:py-24">
+        <!-- Install -->
+        <section id="install" class="cv-section">
+          <h2 class="cv-section-heading">Install</h2>
+          <div class="space-y-4 text-sm">
+            <p>
+              Install a skill with the
+              <a href="https://skills.sh" target="_blank" rel="noreferrer">skills CLI</a>, or copy
+              its folder into <code>~/.claude/skills/</code>.
+            </p>
+          </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="cv-section">
+          <h2 class="cv-section-heading">Skills</h2>
+          <ol class="space-y-12">
+            <!-- Shorter -->
+            <li class="cv-row">
+              <div class="min-w-0">
+                <h3 class="font-medium">
+                  <a
+                    href="https://github.com/jamus/jamus.github.io/tree/master/skills/shorter"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="ext-link"
+                  >
+                    /shorter
+                    <ion-icon
+                      name="open-outline"
+                      aria-hidden="true"
+                      class="project-link"
+                    ></ion-icon>
+                  </a>
+                </h3>
+                <p class="cv-desc">
+                  Re-states Claude's previous response in at most half the words. No re-running
+                  tools or redoing work, just a tighter edit that keeps every fact, filename and
+                  error message. Trigger with "shorter", "too long", "tl;dr" or
+                  <code>/shorter</code>.
+                </p>
+                <pre
+                  class="mt-3 overflow-x-auto rounded bg-gray-100 p-3 text-xs"
+                ><code>npx skills add https://github.com/jamus/jamus.github.io/tree/master/skills/shorter</code></pre>
+                <ul class="tag-list">
+                  <li class="tag">Claude Code</li>
+                  <li class="tag">Agent Skill</li>
+                  <li class="tag"><a href="shorter/SKILL.md">SKILL.md</a></li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <!-- Footer -->
+        <footer class="pb-16 text-xs">
+          <p><a href="../">Back to jamus.co.uk</a></p>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
